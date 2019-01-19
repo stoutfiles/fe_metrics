@@ -21,7 +21,7 @@ Had I kept going, I would have:
 
 ### Run the following commands against MySQL.
 
-create user 'test_user'@'%' identified by 'test_pass';
+CREATE USER 'test_user'@'%' identified by 'test_pass';
 
 GRANT ALL PRIVILEGES ON \*.\* TO 'test_user'@'%' WITH GRANT OPTION;
 
@@ -32,6 +32,8 @@ USE TEST;
 CREATE TABLE metric (id VARCHAR(40), metric_name VARCHAR(255), metric_type VARCHAR(10), created_date DATETIME, updated_date DATETIME);
 
 CREATE TABLE metric_data (id int NOT NULL AUTO_INCREMENT, metric_id VARCHAR(40), value DECIMAL(10,4), metric_type VARCHAR(10), timestamp DATETIME, PRIMARY KEY (id));
+
+CREATE INDEX faster_math on metric_data (metric_id, value);
 
 ### Run application as Spring Boot App
 
