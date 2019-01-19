@@ -10,11 +10,9 @@ Had I kept going, I would have:
 
 -Used a different profile for unit tests and had them run against a different database.
 
--Put MySQL into a docker image.
+-Put MySQL and the application into Docker images.
 
--Some more Swagger documentation
-
--Documented out Big O complexity of each call 
+-Documented out Big O complexity of each call.
 
 
 ## Setup
