@@ -33,8 +33,6 @@ CREATE TABLE metric (id VARCHAR(40), metric_name VARCHAR(255), metric_type VARCH
 
 CREATE TABLE metric_data (id int NOT NULL AUTO_INCREMENT, metric_id VARCHAR(40), value DECIMAL(10,4), metric_type VARCHAR(10), timestamp DATETIME, PRIMARY KEY (id));
 
-ALTER TABLE `metric_data` ADD UNIQUE `unique_index`(`metric_id`, `value`);
-
 ### Run application as Spring Boot App
 
 Once running, API can be used from Swagger.  [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
