@@ -21,7 +21,7 @@ public class MetricResource {
 	@Size(min = 1, max = 255)
 	private String metricName;
 	
-	@ApiModelProperty(value = "The type of metric.", required = false)
+	@ApiModelProperty(value = "The type of metric; gauge or counter.", required = true)
     private MetricType metricType;
 	
 	public MetricResource() {
