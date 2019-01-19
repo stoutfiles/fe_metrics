@@ -12,6 +12,8 @@ Had I kept going, I would have:
 
 -Put MySQL and the application into Docker images.
 
+-Not granted test_user all privileges, but rather CRUD privileges to the databases of this project.
+
 -Documented out Big O complexity of each call.
 
 
@@ -21,7 +23,7 @@ Had I kept going, I would have:
 
 create user 'test_user'@'%' identified by 'test_pass';
 
-GRANT ALL PRIVILEGES ON *.* TO 'test_user'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON \*.\* TO 'test_user'@'%' WITH GRANT OPTION;
 
 CREATE DATABASE TEST;
 
