@@ -1,25 +1,12 @@
 package com.example.metrics;
 
-import java.lang.reflect.Type;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
-import java.util.stream.Stream;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-import org.springframework.data.domain.Pageable;
-
-import com.fasterxml.classmate.TypeResolver;
 import com.google.common.base.Predicates;
-
-import springfox.documentation.builders.AlternateTypeBuilder;
-import springfox.documentation.builders.AlternateTypePropertyBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.schema.AlternateTypeRule;
-import springfox.documentation.schema.AlternateTypeRuleConvention;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -43,13 +30,12 @@ public class SwaggerConfig {
     
     private ApiInfo apiInfo() {
         return new ApiInfo(
-          "Test1", 
-          "API for Test1", 
+          "Metric Demo", 
+          "API for Metric Demo", 
           "1.0", 
           "", 
           new Contact("Shawn Stout", "github.com/stoutfiles", "stout@outlook.com"), 
           "", "", Collections.emptyList());
     }
-    
     
 }

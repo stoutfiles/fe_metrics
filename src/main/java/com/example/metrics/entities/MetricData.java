@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.example.metrics.resources.MetricDataResource;
-import com.example.metrics.resources.MetricType;
 
 @Entity
 @Table(name = "metric_data")
